@@ -1,16 +1,15 @@
 package dan.pl.demo.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+
 @Getter
 @Setter
 @Entity
+@Builder
 @Table(name = "PERSON")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -33,4 +32,3 @@ public class Person {
         return String.format("\nPerson{id=%d, name='%s', location='%s', birthDate=%s}", id, name, location, birthDate);
     }
 }
-
