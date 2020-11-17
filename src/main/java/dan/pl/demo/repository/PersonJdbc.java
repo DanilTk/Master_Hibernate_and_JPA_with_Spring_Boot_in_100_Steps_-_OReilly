@@ -20,6 +20,7 @@ public class PersonJdbc {
     }
 
     public Person findById(int id) {
+
         return jdbcTemplate.queryForObject("select * from person where id=?", new Object[]{id}, personRowMapper);
     }
 }
